@@ -1,0 +1,29 @@
+---
+import Navbar from "./Navbar.astro";
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | afifghulam</title>
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <Navbar site="Afif Qomarul Ghulam" />
+  
+  <main class="flex flex-col mx-auto md:m-auto lg:mx-[350px] py-8">
+    <slot />
+  </main>
+  
+  <footer class="bg-gray-800 text-white py-4">
+    <!-- Footer component -->
+  </footer>
+  <style>
+    body {
+      padding-top: 4rem; /* 64px to match navbar height */
+    }
+  </style>
+</body>
+</html>

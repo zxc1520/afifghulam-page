@@ -1,0 +1,20 @@
+---
+import Layout from "../../components/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = await Astro.glob("../../content/projects/*.md");
+---
+<Layout title="Projects">
+     <section class="project-list">
+          <h1 class="text-3xl font-bold mb-8">Projects</h1>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+               {projects.map((project) => (
+                    <ProjectCard 
+                         title={project.frontmatter.title}
+                         desc={project.frontmatter.desc}
+                         image={project.frontmatter.image}
+                         tags={project.frontmatter.tags} />
+               ))} 
+          </div>
+     </section>
+</Layout>

@@ -1,0 +1,90 @@
+---
+const currentPath = Astro.url.pathname;
+const { site } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' }
+];
+---
+<nav class="bg-white shadow-md fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between h-16">
+      <!-- Logo/Brand -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/" class="text-xl font-bold text-gray-800">
+          {site}
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-3">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class={`
+              px-3 py-2 rounded-md text-sm font-medium transition-colors
+              ${currentPath === link.href 
+                ? 'text-blue-600 bg-blue-50' 
+                : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+              }
+            `}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Navigation Button -->
+      <div class="md:hidden flex items-center">
+        <button
+          id="mobile-menu-button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 focus:outline-none"
+          aria-label="Main menu"
+        >
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+              class="mobile-menu-icon"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`
+            block px-3 py-2 rounded-md text-base font-medium transition-colors
+            ${currentPath === link.href 
+              ? 'text-blue-600 bg-blue-50' 
+              : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+            }
+          `}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle functionality
+  import '../scripts/utils'
+</script>
