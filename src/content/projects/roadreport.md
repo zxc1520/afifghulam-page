@@ -2,7 +2,7 @@
 title: "RoadReport"
 pubDate: 2023
 desc: "Aplikasi yang digunakan untuk melaporkan dan memantau proses perbaikan jalan rusak."
-image: "/src/assets/RoadReport.png"
+image: "/assets/RoadReport.png"
 tags:
   - "Web Dev"
   - "Backend"

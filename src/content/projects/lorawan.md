@@ -2,7 +2,7 @@
 title: "LoRaWAN Project"
 desc: "A project focused on implementing LoRaWAN technology for IoT applications."
 tags: ["LoRaWAN", "IoT", "Embedded Systems"]
-image: "/src/assets/lora.png"
+image: "/assets/lora.png"
 ---
 
 # LoRaWAN Project

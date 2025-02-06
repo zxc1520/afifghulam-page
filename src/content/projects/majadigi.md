@@ -1,7 +1,7 @@
 ---
 title: "Majadigi"
 desc: "A brief description of the Majadigi project."
-image: "/src/assets/Majadigi.png"
+image: "/assets/Majadigi.png"
 date: 2023-10-05
 tags: ["project", "majadigi", "tailwind"]
 ---

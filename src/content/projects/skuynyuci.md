@@ -2,7 +2,7 @@
 title: "Skuynyuci"
 desc: "A project focused on providing efficient and eco-friendly laundry services."
 tags: ["laundry", "eco-friendly", "services"]
-image: "/src/assets/skuynyuci.png"
+image: "/assets/skuynyuci.png"
 ---
 
 # Skuynyuci

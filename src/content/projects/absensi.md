@@ -1,7 +1,7 @@
 ---
 title: Absensi Mahasiswa
 desc: Proyek ini bertujuan untuk mengembangkan sistem absensi bagi mahasiswa magang menggunakan teknologi web modern.
-image: "/src/assets/absensi.png"
+image: "/assets/Absensi.png"
 tags:
   - Web Dev
   - tailwind
