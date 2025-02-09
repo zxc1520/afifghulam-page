@@ -1,10 +1,11 @@
 ---
-title: Absensi Mahasiswa
-desc: Proyek ini bertujuan untuk mengembangkan sistem absensi bagi mahasiswa magang menggunakan teknologi web modern.
+layout: "../../pages/projects/project.astro"
+title: "Absensi Mahasiswa"
+desc: "Proyek ini bertujuan untuk mengembangkan sistem absensi bagi mahasiswa magang menggunakan teknologi web modern."
+date: "2023"
 image: "/assets/Absensi.png"
-tags:
-  - Web Dev
-  - tailwind
+tags: ["Web Dev", "tailwind"]
+slug: "absensi"
 ---
 
 # Absensi Mahasiswa Magang

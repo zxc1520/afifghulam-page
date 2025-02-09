@@ -1,0 +1,20 @@
+---
+import Layout from "../../components/Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+<Layout title="projects">
+  <section class="flex flex-row">
+    <section class="conten">
+      <h2>{frontmatter.title}</h2>
+      <p>{frontmatter.desc}</p>
+    </section>
+    <section class="sidebar">
+      <h3>Tags</h3>
+      <ul>
+        {frontmatter.tags.map((tag: any) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+  </section>
+</Layout>

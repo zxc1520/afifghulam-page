@@ -1,5 +1,6 @@
 ---
 title: "Skuynyuci"
+slug: "skuynyuci"
 desc: "A project focused on providing efficient and eco-friendly laundry services."
 tags: ["laundry", "eco-friendly", "services"]
 image: "/assets/skuynyuci.png"
