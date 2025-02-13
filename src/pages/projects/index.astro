@@ -3,8 +3,8 @@ import { getCollection } from "astro:content";
 import Layout from "../../components/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 
-const projects = await getCollection("projects");
-//const projects = Object.values(import.meta.glob("../../content/projects/*.md", {eager: true}));
+//const projects = await getCollection("projects");
+const projects = Object.values(import.meta.glob("../../content/projects/*.md", {eager: true}));
 ---
 <Layout title="Projects">
      <section class="project-list">
@@ -12,11 +12,11 @@ const projects = await getCollection("projects");
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                {projects.map((project: any) => (
                     <ProjectCard
-                         title={project.data.title}
-                         desc={project.data.desc}
-                         image={project.data.image}
-                         tags={project.data.tags}
-                         slug={project.slug}/>
+                         title={project.frontmatter.title}
+                         desc={project.frontmatter.desc}
+                         image={project.frontmatter.image}
+                         tags={project.frontmatter.tags}
+                         slug={project.frontmatter.slug}/>
                ))} 
           </div>
      </section>

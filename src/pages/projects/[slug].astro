@@ -4,6 +4,7 @@ import Layout from '../../components/Layout.astro';
 
 export async function getStaticPaths() {
      const projects = await getCollection('projects');
+     const posts = import.meta.glob('../../content/projects/*.md', { eager: true });
      return projects.map((project) => ({
           params: {slug: project.slug},
           props: {project}
@@ -14,9 +15,20 @@ const { project } = Astro.props;
 ---
 <Layout title="projects" >
      <section class="container">
-          <img src={project.data.image} alt="gambar"/>
-          <h1>{project.data.title}</h1>
+          <img src={project.data.image} 
+               width="1200"
+               height="600" 
+               alt="gambar"/>
+          <h2 class="h2 font-semibold">{project.data.title}</h2>
           <p>{project.data.date}</p>
           <p>{project.data.desc}</p>
+          <section class="flex flex-col">
+               <section class="main">
+                    <slot />
+               </section>
+               <section class="side">
+
+               </section>
+          </section>
      </section>
 </Layout>

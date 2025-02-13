@@ -1,7 +1,7 @@
 ---
 title: "RoadReport"
 slug: "roadreport"
-pubDate: 2023
+date: "2023-11-12"
 desc: "Aplikasi yang digunakan untuk melaporkan dan memantau proses perbaikan jalan rusak."
 image: "/assets/RoadReport.png"
 tags:
