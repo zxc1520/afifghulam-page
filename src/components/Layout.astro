@@ -17,9 +17,18 @@ const { title } = Astro.props;
     <slot />
   </main>
   
-  <footer class="bg-gray-800 text-white py-4">
-    <!-- Footer component -->
+  <footer class="bg-gray-800 text-gray-300 py-6 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <p class="text-sm">
+        Made with <span class="text-red-500">❤</span> by 
+        <span class="font-semibold text-white">Afif Ghulam</span>
+      </p>
+      <p class="text-xs text-gray-400 mt-2 md:mt-0">
+        © {new Date().getFullYear()} All Rights Reserved
+      </p>
+    </div>
   </footer>
+  
   <style>
     body {
       padding-top: 4rem; /* 64px to match navbar height */

@@ -1,66 +1,116 @@
 ---
 import Layout from "../components/Layout.astro"
 import Project from "../components/ProjectCard.astro"
+import profileImage from '../../public/assets/aku.png'
+import { Image } from "astro:assets";
 
 const allProjects = await Astro.glob('../content/projects/*.md');
 const recent = allProjects.slice(2, 5);
 ---
+
 <Layout title="Home">
-	<section class="hero text-center mb-12">
-		<p class="text-sm text-gray-600">Hello Everyone !</p>
-		<h1 class="text-4xl font-bold mb-4">
-			I'm Afif <span class="font-bold mb-4 text-blue-600">Qomarul</span> Ghulam
-		</h1>
-		<p class="text-xl text-gray-600">
-			Software | Tech Enthusiast | Lifelong Learner
-		</p>
-	</section>
+  <!-- Hero Section -->
+  <section class="hero text-center py-20 bg-gradient-to-b from-gray-50 to-white mb-12">
+    <p class="text-sm text-gray-500 mb-2">👋 Hello Everyone!</p>
+    <h1 class="text-5xl font-extrabold mb-4">
+      I'm Afif <span class="text-blue-600">Qomarul</span> Ghulam
+    </h1>
+    <p class="text-lg text-gray-600 mb-6">
+      Software Engineer | Tech Enthusiast | Lifelong Learner
+    </p>
+    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-md hover:bg-blue-700 transition">
+      View My Projects
+    </a>
+  </section>
 
-	<section class="about bg-white p-8 rounded-lg shadow-md mx-auto mb-12">
-		<h2 class="text-2xl font-semibold mb-2">About Me</h2>
-		<ul class="flex flex-row gap-2 mb-4">
-			<li class="bg-blue-500 rounded-md p-1">
-				<a href="mailto:afifqghulam@gmail.com">
-					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-				</a>
-			</li>
-			<li class="bg-blue-500 rounded-lg p-1">
-				<a href="https://linkedin.com/in/afifghulam" target="_blank" rel="noreferrer noopener">
-					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-				</a>
-			</li>
-			<li class="bg-blue-500 rounded-lg p-1">
-				<a href="https://github.com/zxc1520" target="_blank" rel="noreferrer noopener">
-					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-				</a>
-			</li>
-			<li class="bg-blue-500 rounded-lg p-1">
-				<a href="https://drive.google.com/file/d/1Is6K35Ag5Po5WWyP4_G-nHB2OaV1PnLR/view?usp=sharing" target="_blank" rel="noreferrer noopener">
-					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-user"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>
-				</a>
-			</li>
-		</ul>
-		<p class="text-gray-700">
-			I'm an IT Enthusiast that has experience and practical skills related to IT, such as Fullstack Development, Back End Engineering and 
-			DevOps including Laravel, AdonisJS, Git, Docker,  and Ansible also working with third party cloud and it's services like Google Cloud 
-			Compute Engine, Cloud Run, and AWS EC2. Able to adapt in new enviroments and be challanged to improve my skills.
-		</p>
-	</section>
+  <!-- About Section -->
+  <section class="about max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md mb-16">
+	  <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-6">
+      <!-- Profile Image -->
+      <Image 
+        src={profileImage} 
+        alt="Afif Ghulam" 
+        width={150} 
+        height={150} 
+        class="w-32 h-32 rounded-full shadow-lg border-2 border-gray-200 object-cover"
+      />
+      <div>
+        <p class="text-gray-700 leading-relaxed">
+          I'm an IT Enthusiast with hands-on experience in <b>Fullstack Development</b>,
+          <b>Back End Engineering</b>, and <b>DevOps</b>. Skilled in
+          Laravel, AdonisJS, Git, Docker, and Ansible, with cloud experience on
+          <b>Google Cloud</b> and <b>AWS</b>. I love solving problems,
+          adapting to new challenges, and continuously improving my skills.
+        </p>
+      </div>
+    </div>
+   </section>
 
-	<section class="professional">
-		<section class="headline text-center max-w-wd">
-			<p class="text-sm font-semibold text-gray-600">Always get in touch with</p>
-			<h2 class="text-3xl font-semibold mb-6">Top Projects Contribution</h2>
-			<div class="w-full grid grid-cols-1 md:grid-cols-3 content-center p-5 gap-5">
-				{recent.map(el => {
-					return <Project 
-						title={el.frontmatter.title}
-						desc={el.frontmatter.desc}
-						image={el.frontmatter.image}
-						tags={el.frontmatter.tags}
-						slug={el.frontmatter.slug} />
-				})}
-			</div>
-		</section>
-	</section>
+  <!-- Experience Section -->
+  <section id="experience" class="max-w-3xl mx-auto mb-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
+    
+    <div class="relative border-l border-gray-300">
+      
+      <!-- IT Officer -->
+      <div class="mb-10 ml-6">
+        <!-- Marker -->
+        <div class="absolute w-3 h-3 bg-blue-600 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+        <!-- Card -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h3 class="text-xl font-semibold">Information Technology Officer</h3>
+          <p class="text-gray-700 font-medium mb-2">PT Semangat Bersama Enterpreneurship</p>
+          <p class="text-sm text-gray-500 mb-3">February 2025 - Present</p>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>
+              Developing, managing, and maintaining a web-based internal digital system to support production activities, quality assurance, certification processes, and the maintenance of the seed breeding system using <b>Laravel</b>.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Backend Developer -->
+      <div class="mb-10 ml-6">
+        <!-- Marker -->
+        <div class="absolute w-3 h-3 bg-blue-600 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+        <!-- Card -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h3 class="text-xl font-semibold">Backend Developer</h3>
+          <p class="text-gray-700 font-medium mb-2">Profile Image Studio</p>
+          <p class="text-sm text-gray-500 mb-3">June 2023 - November 2024</p>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>
+              Developing REST API for <b>Dinas Kominfo Provinsi Jawa Timur Majadigi Portal Layanan Jatim</b> using <b>AdonisJS</b>.
+            </li>
+            <li>
+              Developing a REST API for <b>Road Report Dinas PUPR Kota Batu</b> using <b>AdonisJS</b>.
+            </li>
+            <li>
+              Developing a REST API for Internship's Attendance using AdonisJS
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-6xl mx-auto text-center mb-16">
+    <p class="text-sm font-semibold text-gray-600">Always get in touch with</p>
+    <h2 class="text-3xl font-bold mb-6">Top Projects Contribution</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {recent.map(el => (
+        <Project 
+          title={el.frontmatter.title}
+          desc={el.frontmatter.desc}
+          image={el.frontmatter.image}
+          tags={el.frontmatter.tags}
+          slug={el.frontmatter.slug} 
+        />
+      ))}
+    </div>
+  </section>
 </Layout>
+

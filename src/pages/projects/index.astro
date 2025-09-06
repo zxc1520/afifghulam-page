@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import Layout from "../../components/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 
-//const projects = await getCollection("projects");
 const projects = Object.values(import.meta.glob("../../content/projects/*.md", {eager: true}));
 ---
 <Layout title="Projects">
