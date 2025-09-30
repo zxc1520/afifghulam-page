@@ -7,6 +7,10 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
+  legacy: {
+    collections: true
+  },
+
   integrations: [tailwind()],
 
   markdown: {
