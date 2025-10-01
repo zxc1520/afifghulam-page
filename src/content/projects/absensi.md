@@ -1,5 +1,4 @@
 ---
-layout: "../../pages/projects/project.astro"
 title: "Absensi Mahasiswa"
 desc: "Proyek ini bertujuan untuk mengembangkan sistem absensi bagi mahasiswa magang menggunakan teknologi web modern."
 date: "2023"

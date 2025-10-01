@@ -2,8 +2,8 @@
 title: "Majadigi"
 slug: "majadigi"
 desc: "A brief description of the Majadigi project."
-image: "/assets/Majadigi.png"
 date: "2023-10-05"
+image: "/assets/Majadigi.png"
 tags: ["majadigi", "tailwind"]
 ---
 

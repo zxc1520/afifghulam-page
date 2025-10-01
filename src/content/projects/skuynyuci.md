@@ -3,8 +3,8 @@ title: "Skuynyuci"
 slug: "skuynyuci"
 date: "2022-05-03"
 desc: "A project focused on providing efficient and eco-friendly laundry services."
-tags: ["laundry", "eco-friendly", "services"]
 image: "/assets/skuynyuci.png"
+tags: ["laundry", "eco-friendly", "services"]
 ---
 
 # Skuynyuci
