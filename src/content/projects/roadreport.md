@@ -4,10 +4,7 @@ slug: "roadreport"
 date: "2023-11-12"
 desc: "Aplikasi yang digunakan untuk melaporkan dan memantau proses perbaikan jalan rusak."
 image: "/assets/RoadReport.png"
-tags:
-  - "Web Dev"
-  - "Backend"
-  - "DevOps"
+tags: ["Web Dev", "Backend", "DevOps"]
 ---
 
 ## Aplikasi RoadReport
