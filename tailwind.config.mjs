@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -7,6 +9,10 @@ export default {
         primary: "#3B82F6",
         secondary: "#10B981",
       },
+      fontFamily: {
+        montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        zalando: ['Zalando', ...defaultTheme.fontFamily.sans]
+      }
     },
   },
   plugins: [],

@@ -1,7 +1,45 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zalando';
+  src: url('/fonts/ZalandoSansExpanded-VariableFont_wght.ttf') format('truetype-variations');
+
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   margin: 0;
   width: 100%;
   height: 100%;
   background-color: aqua;
+}
+
+h1 {
+  font-size: 2.5rem; /* rem adalah unit yang relatif terhadap ukuran font root */
+  font-weight: 700;  /* 700 sama dengan bold */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
